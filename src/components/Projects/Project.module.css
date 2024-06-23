@@ -1,0 +1,117 @@
+/* .container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    img {
+        max-width: 200px;
+        align-self: center;
+        background-color: var(--project-card-bg);
+        border-radius: 30px;
+    }
+
+    a {
+        width: fit-content;
+        text-decoration: none;
+        color: #222;
+        transition: transform 200ms ease-in-out;
+    }
+
+    a:hover {
+        transform: scale(1.05);
+    }
+}
+
+.projectsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+@media (width >=800px) {
+    .projectsContainer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 0 30px;
+    }
+} */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+
+    a {
+        width: fit-content;
+        text-decoration: none;
+        color: #222;
+        transition: transform 200ms ease-in-out;
+    }
+
+    a:hover {
+        transform: scale(1.05);
+    }
+}
+
+.projectsContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.projectsContainer>* {
+    max-width: 100%;
+}
+
+@media (min-width: 800px) {
+    .projectsContainer {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .container {
+        padding: 0 30px;
+
+        img {
+            max-width: 200px;
+            align-self: center;
+            /* background-color: var(--project-card-bg); */
+            border-radius: 30px;
+        }
+    }
+
+    h3 {
+        font-size: 15px;
+        text-decoration: none;
+    }
+
+    p {
+        font-size: 12px;
+        text-decoration: none;
+    }
+
+}
+
+@media (max-width: 799px) {
+    .projectsContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    h3 {
+        font-size: 12px;
+    }
+
+    p {
+        font-size: 10px;
+    }
+
+    img {
+        max-width: 100px;
+        align-self: center;
+        /* background-color: var(--project-card-bg); */
+        border-radius: 30px;
+    }
+}
