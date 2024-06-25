@@ -6,7 +6,7 @@ import githubLight from "../../assets/github-light.svg";
 import githubDark from "../../assets/github-dark.svg";
 import linkedinLight from "../../assets/linkedin-light.svg";
 import linkedinDark from "../../assets/linkedin-dark.svg";
-import CV from "../../assets/cv.pdf";
+// import CV from "../../assets/cv.pdf";
 import { useTheme } from "../../reuse/ThemeContext";
 
 const Introduction = () => {
@@ -39,9 +39,9 @@ const Introduction = () => {
                 <p className={styles.description}>
                     I'm a passionate website developer with a business mindset, leveraging technology to solve problems and boost revenue. I create impactful digital solutions that transform ideas into success.
                 </p>
-                <a href={CV} download>
+{/*                 <a href={CV} download>
                     <button className="hover" >Resume</button>
-                </a>
+                </a> */}
             </div>
         </section>
     )
